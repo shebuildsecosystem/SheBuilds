@@ -1,0 +1,44 @@
+# Development Workflow
+
+## Available Scripts
+From [package.json](mdc:package.json):
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+## Development Server
+- Run `npm run dev` to start the Vite development server
+- Hot module replacement is enabled
+- Server runs on localhost with automatic reloading
+
+## Build Process
+- Uses Vite for fast builds
+- TypeScript compilation is handled by Vite
+- Tailwind CSS is processed during build
+- Output goes to `dist/` directory
+
+## Linting
+- ESLint is configured for TypeScript and React
+- Run `npm run lint` to check code quality
+- Follow the ESLint rules defined in [eslint.config.js](mdc:eslint.config.js)
+
+## File Structure Conventions
+- Components: PascalCase (e.g., `Hero.tsx`)
+- Pages: PascalCase (e.g., `Index.tsx`)
+- Utilities: camelCase (e.g., `utils.ts`)
+- Hooks: camelCase with `use` prefix (e.g., `use-mobile.tsx`)
+
+## Import Aliases
+- `@/` points to `src/` directory
+- Configured in [vite.config.ts](mdc:vite.config.ts) and [tsconfig.json](mdc:tsconfig.json)
+
+## TypeScript Configuration
+- Strict mode enabled
+- Path mapping configured for `@/` alias
+- React JSX transform enabled
+description:
+globs:
+alwaysApply: false
+---

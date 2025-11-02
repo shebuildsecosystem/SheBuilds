@@ -1,0 +1,105 @@
+# Development Workflow
+
+## Environment Setup
+
+### Prerequisites
+- Node.js 18+ and npm
+- MongoDB database
+- Cloudinary account for file uploads
+- Email service (Gmail SMTP recommended)
+
+### Frontend Setup
+```bash
+npm install
+npm run dev
+```
+
+### Backend Setup
+```bash
+cd server
+npm install
+cp .env.example .env
+# Configure environment variables
+npm run dev
+```
+
+## Development Process
+
+### Code Organization
+- **Frontend**: React components in [src/components/](mdc:src/components/)
+- **Backend**: Express routes in [server/src/routes/](mdc:server/src/routes/)
+- **Database**: Mongoose models in [server/src/models/](mdc:server/src/models/)
+- **Configuration**: Environment variables and config files
+
+### Git Workflow
+- Use descriptive commit messages
+- Create feature branches for new functionality
+- Test changes before merging to main
+- Keep commits atomic and focused
+
+### Testing Strategy
+- Unit tests for utility functions
+- Integration tests for API endpoints
+- Component tests for React components
+- E2E tests for critical user flows
+
+### Code Quality
+- Use ESLint for code linting
+- Follow TypeScript strict mode
+- Use Prettier for code formatting
+- Maintain consistent naming conventions
+
+## Deployment
+
+### Frontend Deployment
+- Build with `npm run build`
+- Deploy to Vercel, Netlify, or similar
+- Configure environment variables for API endpoints
+
+### Backend Deployment
+- Use PM2 or similar process manager
+- Set up MongoDB Atlas for production database
+- Configure Cloudinary for file storage
+- Set up email service for production
+
+### Environment Variables
+- Frontend: API base URL, feature flags
+- Backend: Database URI, JWT secret, email config, Cloudinary credentials
+
+## Monitoring & Maintenance
+
+### Performance
+- Monitor API response times
+- Optimize database queries
+- Use proper indexing strategies
+- Implement caching where appropriate
+
+### Security
+- Validate all user inputs
+- Use HTTPS in production
+- Implement rate limiting
+- Regular security audits
+
+### Database Management
+- Regular backups
+- Monitor database performance
+- Clean up old data periodically
+- Maintain proper indexes
+
+## Troubleshooting
+
+### Common Issues
+- CORS errors: Check backend CORS configuration
+- Authentication issues: Verify JWT token handling
+- File upload problems: Check Cloudinary configuration
+- Email delivery: Verify SMTP settings
+
+### Debugging
+- Use console.log for development debugging
+- Implement proper error logging
+- Use browser dev tools for frontend issues
+- Use MongoDB Compass for database debugging
+description:
+globs:
+alwaysApply: false
+---

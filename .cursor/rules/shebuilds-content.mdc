@@ -1,0 +1,186 @@
+# SheBuilds Content and Branding Guidelines
+
+## Brand Identity
+- **Name**: SheBuilds
+- **Tagline**: "Bridging Gaps, Building Futures"
+- **Mission**: Empowering women in technology and entrepreneurship
+
+## Platform Overview: Builder's Arena
+A community platform for builders (especially women/non-binary builders) to:
+- Showcase personal portfolios
+- Add and grow projects
+- Apply for grants
+- Participate in monthly challenges/hackathons
+- Get featured and supported based on real progress
+
+## Core Objects / Data Models
+
+### 1. User (Builder)
+| Attribute | Description |
+|-----------|-------------|
+| user_id | Unique identifier |
+| name, username, email, bio | Basic info |
+| profile_picture | Avatar |
+| location, timezone | Optional but useful |
+| skills | List of technical + creative skills |
+| interests | Tags/topics user is interested in |
+| social_links | GitHub, LinkedIn, Twitter, personal site |
+| portfolio_slug | Custom URL for portfolio |
+| joined_date | Onboarding timestamp |
+| is_verified | Badge for trusted profiles |
+
+### 2. Project
+| Attribute | Description |
+|-----------|-------------|
+| project_id | Unique ID |
+| title, description | Essential info |
+| tags, tech_stack | Categorization |
+| status | idea / in-progress / completed |
+| media | Images, videos, demos |
+| is_grant_eligible | Marked by builder |
+| progress_logs | Logs submitted over time |
+| team_members | Other user IDs (if collaborative) |
+| submitted_to_challenges | List of challenge IDs |
+
+### 3. Grant
+| Attribute | Description |
+|-----------|-------------|
+| grant_id | Unique ID |
+| amount | Amount in INR or USD |
+| status | Applied / In review / Approved / Rejected |
+| project_id | Linked project |
+| builder_id | Linked user |
+| review_notes | Admin comments or scoring |
+| disbursed_date | Payment tracking |
+
+### 4. Challenge / Hackathon
+| Attribute | Description |
+|-----------|-------------|
+| challenge_id | Unique ID |
+| title, theme, duration | Event basics |
+| start_date, end_date | Schedule |
+| prizes, sponsors | Optional |
+| rules, submission_requirements | Clear expectations |
+| participants | List of user/project IDs |
+| winners | List of winning projects |
+
+### 5. ProgressLog
+| Attribute | Description |
+|-----------|-------------|
+| log_id | Unique ID |
+| project_id | Linked project |
+| date | Timestamp |
+| content | Markdown or rich text |
+| media | Screenshots, videos |
+| impact_summary | Optional field for grant evaluators |
+
+## Workflow & Experience Design
+
+### 🌱 User Journey (Builder)
+
+#### 1. Onboarding
+- Sign up (email or OAuth)
+- Pick interests + skills
+- Set up portfolio in 5 steps:
+  - About you
+  - Skills & interests
+  - Social links
+  - Upload projects
+  - Mark projects for grants
+
+#### 2. Builder Portfolio Page
+- Unique URL (e.g., shebuilds.io/@anita)
+- About section, interests
+- Skills cloud
+- Featured projects (with grant-eligible badge)
+- Progress logs (timeline format)
+- Social share button
+
+#### 3. Projects
+- CRUD interface to add and edit
+- Tag tech stack, attach images/videos
+- Set public/private
+- Mark for grant consideration
+- Log progress weekly/bi-weekly
+
+#### 4. Grant Process
+- Projects marked as eligible go to dashboard
+- Admins review project logs & builder profiles
+- Email updates + dashboard tracking
+- Auto-evaluation of consistency (number of logs, growth)
+
+#### 5. Monthly Challenges / Hackathons
+- Visible on homepage
+- Countdown timer + register CTA
+- Submit project -> link existing or new
+- Tag challenge during submission
+- Community voting (optional)
+- Winners announced with badges + prizes
+
+## 🎨 Builder Portfolio Builder (Frontend Module)
+Your builder should be:
+- **Visual**: drag and drop / card layout
+- **Customizable**: light/dark themes, layout presets
+- **Responsive**: mobile-first experience
+- **Shareable**: OG tags, preview cards, social banners
+
+### Features:
+- Add cover image, color palette
+- Show featured projects
+- Highlight 3 key skills
+- Quote/motto section
+- Download PDF version (for resumes etc.)
+
+## 📈 Admin Dashboard
+For your core team to:
+- Approve grant projects
+- Track builder growth
+- Moderate flagged content
+- Highlight top projects
+- View analytics: builder activity, log submissions, traffic
+
+## Content Structure
+The main landing page components are organized in [src/pages/Index.tsx](mdc:src/pages/Index.tsx):
+- Hero section with animated butterfly
+- Values section
+- Events section with auto-scrolling cards
+- Ecosystem section
+- Impact section
+- Partners section
+- Footer
+
+## Visual Elements
+- **Butterfly Animation**: Central brand element in Hero section
+- **Auto-scrolling Event Cards**: Showcase community events
+- **Color Palette**: Amber/orange accents with gray tones
+- **Typography**: Inter for body text, Martian Mono for headings
+
+## Content Guidelines
+- Focus on community and empowerment
+- Highlight events and opportunities
+- Emphasize inclusivity and support
+- Use inclusive language throughout
+- Showcase real community members and events
+
+## Event Content
+Events are displayed in the Hero section with:
+- Event titles and images
+- Auto-scrolling animation
+- Hover effects for interaction
+- Responsive design for all screen sizes
+
+## Brand Voice
+- Empowering and inclusive
+- Community-focused
+- Professional yet approachable
+- Encouraging and supportive
+
+## Key Messages
+- Community of 10,000+ builders and leaders
+- Bridging gaps in tech and entrepreneurship
+- Building futures for women in technology
+- Inclusive fellowship program
+description:
+globs:
+alwaysApply: false
+---

@@ -1,0 +1,59 @@
+# shadcn/ui Component Guidelines
+
+## Available Components
+All shadcn/ui components are available in [src/components/ui/](mdc:src/components/ui/):
+- Button, Card, Dialog, Form components
+- Navigation, Layout components (Accordion, Tabs, etc.)
+- Feedback components (Toast, Alert, etc.)
+- Data display components (Table, Badge, etc.)
+
+## Import Pattern
+```tsx
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+```
+
+## Component Usage
+- Use the `Button` component for all buttons
+- Use `Card` components for content containers
+- Use `Dialog` for modals and overlays
+- Use `Toast` for notifications (via useToast hook)
+
+## Button Variants
+- `default`: Primary actions
+- `destructive`: Dangerous actions
+- `outline`: Secondary actions
+- `secondary`: Alternative styling
+- `ghost`: Minimal styling
+- `link`: Link-like appearance
+
+## Form Components
+- Use `Form` components with React Hook Form
+- Use `Input`, `Textarea`, `Select` for form fields
+- Use `Label` for form labels
+- Use `Checkbox`, `RadioGroup` for selections
+
+## Example Usage
+```tsx
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+const Component = () => {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Title</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Button variant="default" className="bg-amber-800 hover:bg-amber-900">
+          Action
+        </Button>
+      </CardContent>
+    </Card>
+  );
+};
+```
+description:
+globs:
+alwaysApply: false
+---

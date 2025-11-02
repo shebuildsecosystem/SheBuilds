@@ -1,0 +1,48 @@
+# Frontend Development Guidelines
+
+## React + TypeScript Best Practices
+
+### Component Structure
+- Use functional components with TypeScript interfaces for props
+- Export interfaces alongside components for reusability
+- Use proper TypeScript types for all props and state
+- Follow the component structure in [src/components/Hero.tsx](mdc:src/components/Hero.tsx) as reference
+
+### State Management
+- Use React hooks (useState, useEffect, useContext) appropriately
+- For complex state, consider custom hooks in [src/hooks/](mdc:src/hooks/)
+- Use TanStack Query for server state management when connecting to backend
+
+### Routing
+- Use React Router DOM for navigation
+- Route definitions are in [src/App.tsx](mdc:src/App.tsx)
+- Page components are in [src/pages/](mdc:src/pages/)
+
+### Styling with Tailwind CSS
+- Use Tailwind utility classes for styling
+- Configuration is in [tailwind.config.ts](mdc:tailwind.config.ts)
+- Use shadcn/ui components from [src/components/ui/](mdc:src/components/ui/)
+- Follow responsive design patterns (mobile-first)
+- Use consistent spacing and color schemes
+
+### shadcn/ui Components
+- Import components from `@/components/ui/`
+- Use proper TypeScript interfaces for component props
+- Follow the pattern established in existing components
+- Reference [src/components/ui/button.tsx](mdc:src/components/ui/button.tsx) for examples
+
+### File Organization
+- Components in [src/components/](mdc:src/components/)
+- Pages in [src/pages/](mdc:src/pages/)
+- Hooks in [src/hooks/](mdc:src/hooks/)
+- Utilities in [src/lib/](mdc:src/lib/)
+
+### Build and Development
+- Development server: `npm run dev`
+- Build: `npm run build`
+- Vite configuration: [vite.config.ts](mdc:vite.config.ts)
+- TypeScript configuration: [tsconfig.json](mdc:tsconfig.json)
+description:
+globs:
+alwaysApply: false
+---

@@ -1,0 +1,52 @@
+# Tailwind CSS and Styling Guidelines
+
+## Tailwind CSS Usage
+- Use Tailwind utility classes for styling
+- Follow mobile-first responsive design
+- Use the custom color palette defined in [tailwind.config.ts](mdc:tailwind.config.ts)
+- Prefer utility classes over custom CSS when possible
+
+## Custom Fonts
+- Use `font-inter` for body text and general content
+- Use `font-martian` for headings and special text
+- Fonts are configured in [tailwind.config.ts](mdc:tailwind.config.ts)
+
+## Color System
+- Use the design system colors defined in Tailwind config
+- Primary colors: gray-900, amber-800, orange-500
+- Background: white, gray-50, gray-100
+- Text: gray-900, gray-600, gray-700
+
+## Responsive Design
+- Use Tailwind's responsive prefixes (sm:, md:, lg:, xl:)
+- Design mobile-first
+- Test on multiple screen sizes
+
+## Custom Animations
+- Use Tailwind's built-in animations when possible
+- For custom animations, add them to the component's style tag
+- Use CSS keyframes for complex animations
+
+## Component Styling Patterns
+```tsx
+// Good: Using Tailwind utilities
+<div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+  <h1 className="text-6xl md:text-7xl font-light text-gray-900 font-martian">
+    Heading
+  </h1>
+</div>
+
+// Custom animations in style tag
+<style dangerouslySetInnerHTML={{
+  __html: `
+    @keyframes custom-animation {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  `
+}} />
+```
+description:
+globs:
+alwaysApply: false
+---

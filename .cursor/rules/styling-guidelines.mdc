@@ -1,0 +1,36 @@
+# SheBuilds Styling Guidelines
+
+## Design System
+
+- Use the existing color scheme with orange/amber as primary accent colors
+- Typography uses:
+  - "font-martian" for headings (lighter weight for main headings)
+  - "font-inter" for body text
+
+## CSS Patterns
+
+- Use Tailwind CSS for styling with consistent class patterns
+- Maintain responsive design with mobile-first approach
+- Animation classes follow these naming conventions:
+  - "animate-float" for floating elements
+  - "animate-pulse-orange" for pulsing text effects
+
+## Component Structure
+
+- Section components should include:
+  - Intersection Observer for scroll-based animations
+  - Consistent padding: "py-16 px-6" or "py-20 px-6"
+  - Wrapper with "max-w-6xl mx-auto"
+
+## Animation Effects
+
+- Use smooth transitions with consistent durations:
+  - "transition-all duration-300" for hover effects
+  - "transition-all duration-1000" for scroll-reveal effects
+  
+- Components should fade and slide in with staggered delays:
+  ```jsx
+  <div className={`transition-all duration-1000 delay-${delay} ${
+    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+  }`}>
+  ```

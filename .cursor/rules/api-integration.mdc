@@ -1,0 +1,80 @@
+# API Integration Guidelines
+
+## Backend API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
+- `POST /api/auth/logout` - User logout
+- `POST /api/auth/forgot-password` - Password reset request
+- `POST /api/auth/reset-password` - Password reset
+
+### User Management
+- `GET /api/users/profile` - Get user profile
+- `PUT /api/users/profile` - Update user profile
+- `GET /api/users/:username` - Get public user profile
+
+### Projects
+- `GET /api/projects` - List projects with filtering
+- `POST /api/projects` - Create new project
+- `GET /api/projects/:id` - Get project details
+- `PUT /api/projects/:id` - Update project
+- `DELETE /api/projects/:id` - Delete project
+
+### Grants
+- `GET /api/grants` - List available grants
+- `POST /api/grants` - Apply for grant
+- `GET /api/grants/:id` - Get grant details
+- `PUT /api/grants/:id/status` - Update grant status (admin)
+
+### Challenges
+- `GET /api/challenges` - List challenges
+- `POST /api/challenges` - Create challenge (admin)
+- `GET /api/challenges/:id` - Get challenge details
+- `POST /api/challenges/:id/register` - Register for challenge
+- `POST /api/challenges/:id/submit` - Submit challenge entry
+
+### File Uploads
+- `POST /api/upload` - Upload files to Cloudinary
+- Supports images, documents, and project files
+
+### Search & Analytics
+- `GET /api/search/users` - Search users
+- `GET /api/search/projects` - Search projects
+- `GET /api/analytics/popular-skills` - Get popular skills
+- `GET /api/analytics/platform-stats` - Get platform statistics
+
+## Frontend Integration
+
+### API Client Setup
+- Use TanStack Query for server state management
+- Create API client with base URL configuration
+- Handle authentication tokens in requests
+- Implement proper error handling and loading states
+
+### Authentication Flow
+- Store JWT tokens securely (httpOnly cookies or secure storage)
+- Implement automatic token refresh
+- Handle authentication state globally
+- Redirect unauthenticated users appropriately
+
+### Data Fetching Patterns
+- Use React Query for caching and synchronization
+- Implement optimistic updates where appropriate
+- Handle loading and error states consistently
+- Use proper TypeScript interfaces for API responses
+
+### File Upload Integration
+- Use FormData for multipart uploads
+- Show upload progress indicators
+- Handle upload errors gracefully
+- Validate file types and sizes on frontend
+
+### Real-time Features
+- Consider WebSocket integration for real-time updates
+- Implement notifications for grant/challenge updates
+- Use polling for data that changes frequently
+description:
+globs:
+alwaysApply: false
+---

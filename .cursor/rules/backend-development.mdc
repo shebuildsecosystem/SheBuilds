@@ -1,0 +1,56 @@
+# Backend Development Guidelines
+
+## Node.js + Express + TypeScript
+
+### Project Structure
+- Entry point: [server/src/index.ts](mdc:server/src/index.ts)
+- Models: [server/src/models/](mdc:server/src/models/)
+- Controllers: [server/src/controllers/](mdc:server/src/controllers/)
+- Routes: [server/src/routes/](mdc:server/src/routes/)
+- Middleware: [server/src/middleware/](mdc:server/src/middleware/)
+- Services: [server/src/services/](mdc:server/src/services/)
+- Config: [server/src/config/](mdc:server/src/config/)
+
+### Database Models (Mongoose)
+- Follow the pattern in [server/src/models/User.ts](mdc:server/src/models/User.ts)
+- Use TypeScript interfaces extending Document
+- Define indexes only once (avoid duplicate index warnings)
+- Use proper validation and middleware hooks
+- Reference existing models: [Project.ts](mdc:server/src/models/Project.ts), [Grant.ts](mdc:server/src/models/Grant.ts), [Challenge.ts](mdc:server/src/models/Challenge.ts)
+
+### API Controllers
+- Follow the pattern in [server/src/controllers/authController.ts](mdc:server/src/controllers/authController.ts)
+- Use async/await with proper error handling
+- Return consistent response formats
+- Use TypeScript for request/response types
+- Implement proper validation using middleware
+
+### Authentication & Authorization
+- JWT tokens for authentication
+- Middleware in [server/src/middleware/auth.ts](mdc:server/src/middleware/auth.ts)
+- Password hashing with bcrypt
+- Role-based access control where needed
+
+### File Uploads
+- Use Cloudinary for image/file storage
+- Multer for handling multipart/form-data
+- Service in [server/src/services/uploadService.ts](mdc:server/src/services/uploadService.ts)
+
+### Email Services
+- Nodemailer for email sending
+- Templates in [server/src/services/emailService.ts](mdc:server/src/services/emailService.ts)
+- Environment variables for SMTP configuration
+
+### Environment Configuration
+- Use [server/.env.example](mdc:server/.env.example) as template
+- Database connection in [server/src/config/database.ts](mdc:server/src/config/database.ts)
+- JWT configuration in [server/src/config/jwt.ts](mdc:server/src/config/jwt.ts)
+
+### Development Commands
+- Start development: `npm run dev` (in server directory)
+- Build: `npm run build`
+- TypeScript configuration: [server/tsconfig.json](mdc:server/tsconfig.json)
+description:
+globs:
+alwaysApply: false
+---

@@ -1,0 +1,46 @@
+# SheBuilds Builder's Arena Project Structure
+
+This is a full-stack platform for the SheBuilds Builder's Arena, consisting of a React frontend and Node.js backend.
+
+## Frontend (React + TypeScript + Vite)
+- **Entry Point**: [src/main.tsx](mdc:src/main.tsx) - Main React application entry
+- **App Component**: [src/App.tsx](mdc:src/App.tsx) - Root component with routing
+- **Components**: [src/components/](mdc:src/components/) - Reusable UI components
+  - [Hero.tsx](mdc:src/components/Hero.tsx) - Landing page hero section
+  - [About.tsx](mdc:src/components/About.tsx) - About section
+  - [Ecosystem.tsx](mdc:src/components/Ecosystem.tsx) - Platform ecosystem
+  - [Events.tsx](mdc:src/components/Events.tsx) - Events and challenges
+  - [Impact.tsx](mdc:src/components/Impact.tsx) - Impact metrics
+  - [Partners.tsx](mdc:src/components/Partners.tsx) - Partner organizations
+  - [Sponsors.tsx](mdc:src/components/Sponsors.tsx) - Sponsors section
+  - [CallToAction.tsx](mdc:src/components/CallToAction.tsx) - CTA components
+  - [Footer.tsx](mdc:src/components/Footer.tsx) - Site footer
+  - [Values.tsx](mdc:src/components/Values.tsx) - Core values
+- **UI Components**: [src/components/ui/](mdc:src/components/ui/) - shadcn/ui components
+- **Pages**: [src/pages/](mdc:src/pages/) - Route components
+- **Hooks**: [src/hooks/](mdc:src/hooks/) - Custom React hooks
+- **Styling**: [tailwind.config.ts](mdc:tailwind.config.ts) - Tailwind CSS configuration
+
+## Backend (Node.js + Express + TypeScript)
+- **Entry Point**: [server/src/index.ts](mdc:server/src/index.ts) - Server startup
+- **Models**: [server/src/models/](mdc:server/src/models/) - Mongoose schemas
+  - [User.ts](mdc:server/src/models/User.ts) - User model with authentication
+  - [Project.ts](mdc:server/src/models/Project.ts) - Project submissions
+  - [Grant.ts](mdc:server/src/models/Grant.ts) - Grant applications
+  - [Challenge.ts](mdc:server/src/models/Challenge.ts) - Challenge system
+  - [ProgressLog.ts](mdc:server/src/models/ProgressLog.ts) - Progress tracking
+- **Controllers**: [server/src/controllers/](mdc:server/src/controllers/) - Business logic
+- **Routes**: [server/src/routes/](mdc:server/src/routes/) - API endpoints
+- **Middleware**: [server/src/middleware/](mdc:server/src/middleware/) - Auth and validation
+- **Services**: [server/src/services/](mdc:server/src/services/) - Email and file upload
+- **Config**: [server/src/config/](mdc:server/src/config/) - Database and environment setup
+
+## Key Features
+- User authentication and profiles
+- Project submission and management
+- Grant application system
+- Challenge participation
+- Progress tracking and analytics
+- File uploads (Cloudinary)
+- Email notifications
+- Search and filtering

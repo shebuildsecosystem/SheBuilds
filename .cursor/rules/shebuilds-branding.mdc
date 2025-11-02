@@ -1,0 +1,57 @@
+# SheBuilds Branding & Content Guidelines
+
+## Brand Identity
+- **Mission**: Empowering women in tech through community, mentorship, and opportunities
+- **Values**: Inclusivity, collaboration, innovation, empowerment
+- **Target Audience**: Women in tech, students, professionals, allies
+
+## Content Guidelines
+
+### Messaging
+- Use empowering and inclusive language
+- Highlight women's achievements and contributions
+- Focus on community and collaboration
+- Emphasize learning and growth opportunities
+- Avoid gender stereotypes and bias
+
+### Visual Design
+- Use the color scheme defined in [tailwind.config.ts](mdc:tailwind.config.ts)
+- Maintain consistent typography and spacing
+- Use high-quality images that represent diversity
+- Ensure accessibility standards are met
+
+### Content Structure
+- Reference [shebuilds-content.md](mdc:shebuilds-content.md) for approved content
+- Use consistent terminology across the platform
+- Include clear calls-to-action
+- Provide value-driven content
+
+## Platform Features
+
+### Builder's Arena
+- **Purpose**: Platform for women to showcase projects, apply for grants, and participate in challenges
+- **Key Features**: Project submissions, grant applications, challenge participation, progress tracking
+- **User Journey**: Registration → Profile creation → Project submission → Grant/Challenge participation → Community engagement
+
+### Community Guidelines
+- Foster inclusive and supportive environment
+- Encourage constructive feedback and collaboration
+- Maintain professional and respectful communication
+- Celebrate diverse perspectives and experiences
+
+### Content Moderation
+- Review user-generated content for appropriateness
+- Ensure projects and submissions align with community values
+- Moderate comments and interactions
+- Provide clear guidelines for acceptable content
+
+## Technical Implementation
+- Use consistent error messages and user feedback
+- Implement proper form validation with helpful messages
+- Ensure responsive design for all devices
+- Maintain accessibility standards (WCAG compliance)
+- Use proper alt text for images and icons
+description:
+globs:
+alwaysApply: false
+---

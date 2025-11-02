@@ -1,0 +1,62 @@
+# Development Best Practices
+
+## Code Organization
+- Keep components focused and single-purpose
+- Use proper TypeScript interfaces for all props
+- Follow the established file structure
+- Use meaningful component and variable names
+
+## Performance
+- Use React.memo for expensive components
+- Implement proper key props for lists
+- Optimize images and assets
+- Use lazy loading for large components
+
+## Accessibility
+- Use semantic HTML elements
+- Include proper ARIA labels
+- Ensure keyboard navigation works
+- Maintain proper color contrast ratios
+- Test with screen readers
+
+## State Management
+- Use React hooks for local state
+- Use TanStack Query for server state
+- Keep state as close to where it's used as possible
+- Avoid prop drilling by using context when needed
+
+## Error Handling
+- Implement error boundaries for React components
+- Use try-catch blocks for async operations
+- Provide meaningful error messages
+- Log errors appropriately
+
+## Testing
+- Write unit tests for utility functions
+- Test component behavior, not implementation
+- Use React Testing Library for component tests
+- Test accessibility features
+
+## Code Quality
+- Follow ESLint rules
+- Use Prettier for consistent formatting
+- Write self-documenting code
+- Add comments for complex logic
+- Keep functions small and focused
+
+## Git Workflow
+- Write descriptive commit messages
+- Use feature branches for new development
+- Review code before merging
+- Keep commits atomic and focused
+
+## Security
+- Validate all user inputs
+- Sanitize data before rendering
+- Use HTTPS in production
+- Follow OWASP guidelines
+- Keep dependencies updated
+description:
+globs:
+alwaysApply: false
+---

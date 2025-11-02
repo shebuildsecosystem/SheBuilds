@@ -1,0 +1,51 @@
+# TypeScript and React Development Guidelines
+
+## Component Structure
+- Use functional components with TypeScript
+- Export components as default exports
+- Use proper TypeScript interfaces for props
+- Import React when using JSX: `import React from 'react'`
+
+## Import Patterns
+- Use absolute imports with `@/` prefix for src directory
+- Import UI components from `@/components/ui/`
+- Import custom hooks from `@/hooks/`
+- Import utilities from `@/lib/utils`
+
+## TypeScript Best Practices
+- Define interfaces for component props
+- Use type inference when possible
+- Prefer `interface` over `type` for object shapes
+- Use proper typing for event handlers
+
+## React Patterns
+- Use React hooks (useState, useEffect, etc.)
+- Implement proper error boundaries
+- Use React.memo for performance optimization when needed
+- Follow React naming conventions (PascalCase for components)
+
+## Example Component Structure
+```typescript
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+interface ComponentProps {
+  title: string;
+  onClick?: () => void;
+}
+
+const Component: React.FC<ComponentProps> = ({ title, onClick }) => {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <Button onClick={onClick}>Click me</Button>
+    </div>
+  );
+};
+
+export default Component;
+```
+description:
+globs:
+alwaysApply: false
+---
