@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     proxy: {
-      '/api': 'http://localhost:5000'
+      '/api': 'https://api.shebuildsecosystem.com'
     }
   },
   plugins: [

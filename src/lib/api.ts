@@ -2,7 +2,7 @@
 // src/lib/api.ts
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = 'https://api.shebuildsecosystem.com/api';
 
 // Initialize jwtToken from localStorage if present
 let jwtToken: string | null = localStorage.getItem('token');
