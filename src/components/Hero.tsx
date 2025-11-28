@@ -76,12 +76,12 @@ const Hero = () => {
           </p> */}
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button className="bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 text-base font-medium rounded-full font-inter" onClick={() => navigate('/projects')}>
+            {/* <Button className="bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 text-base font-medium rounded-full font-inter" onClick={() => navigate('/projects')}>
               Explore Projects
             </Button>
             <Button variant="ghost" className="text-gray-700 hover:text-gray-900 px-8 py-3 text-base font-medium font-inter" onClick={() => navigate('/community')}>
               Explore Community
-            </Button>
+            </Button> */}
             {!isLoggedIn && (
               <Button className="bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 text-base font-medium rounded-full font-inter" onClick={() => navigate('/register')}>
                 Join SheBuilds
