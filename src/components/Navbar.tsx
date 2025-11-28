@@ -43,18 +43,18 @@ const Navbar: React.FC = () => {
                   >
                     Community
                   </button>
-                  <button 
+                  {/* <button 
                     className="w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 font-inter transition-colors" 
                     onClick={() => navigate('/events')}
                   >
                     Events
-                  </button>
-                  <button 
+                  </button> */}
+                  {/* <button 
                     className="w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 font-inter transition-colors" 
                     onClick={() => navigate('/projects')}
                   >
                     Projects
-                  </button>
+                  </button> */}
                   <button 
                     className="w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 font-inter transition-colors" 
                     onClick={() => navigate('/grant-programs')}
@@ -67,18 +67,18 @@ const Navbar: React.FC = () => {
                   >
                     Grants
                   </button>
-                  <button 
+                  {/* <button 
                     className="w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 font-inter transition-colors" 
                     onClick={() => navigate('/announcements')}
                   >
                     Announcements
-                  </button>
-                  <button 
+                  </button> */}
+                  {/* <button 
                     className="w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 font-inter transition-colors" 
                     onClick={() => navigate('/projects/create')}
                   >
                     Create Project
-                  </button>
+                  </button> */}
                 </div>
               </div>
               
@@ -154,24 +154,24 @@ const Navbar: React.FC = () => {
           <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/community')}>
             Community
           </button>
-          <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/events')}>
+          {/* <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/events')}>
             Events
-          </button>
-          <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/projects')}>
+          </button> */}
+          {/* <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/projects')}>
             Projects
-          </button>
+          </button> */}
           <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/grant-programs')}>
             Grant Programs
           </button>
           <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/usergrants')}>
             Grants
           </button>
-          <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/announcements')}>
+          {/* <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/announcements')}>
             Announcements
-          </button>
-          <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/projects/create')}>
+          </button> */}
+          {/* <button className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-inter rounded-lg transition-colors" onClick={() => navigate('/projects/create')}>
             Create Project
-          </button>
+          </button> */}
         </div>
       </div>
       
