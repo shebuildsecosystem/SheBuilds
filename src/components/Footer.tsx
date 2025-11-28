@@ -15,7 +15,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-gray-600 font-inter mb-4">
-              Bridging Gaps, Building Futures. An inclusive community and fellowship program dedicated to empowering women in technology and entrepreneurship.
+              Bridging Gaps, Breaking Barriers. An inclusive community and fellowship program dedicated to empowering women in technology and entrepreneurship.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors duration-300">

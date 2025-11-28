@@ -48,12 +48,12 @@ const Hero = () => {
       <Navbar />
 
       {/* Announcement Banner */}
-      <div className="bg-gray-50 text-center py-3">
+      {/* <div className="bg-gray-50 text-center py-3">
         <p className="text-sm text-gray-600 font-inter">
           Join a community of over <span className="text-orange-500 font-semibold">10,000+</span> builders and leaders
           <span className="ml-2">→</span>
         </p>
-      </div>
+      </div> */}
 
       {/* Hero Content */}
       <section className="relative px-6 py-16 text-center">
@@ -68,7 +68,7 @@ const Hero = () => {
           <h1 className="text-6xl md:text-7xl font-light mb-8 text-gray-900 leading-tight font-martian">
             Bridging <span id="gaps-target" className="relative">Gaps</span>,
             <br />
-            Building Futures.
+            Breaking Barriers.
           </h1>
           
           {/* <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-inter font-light">
