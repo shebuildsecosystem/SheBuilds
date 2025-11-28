@@ -15,7 +15,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-gray-600 font-inter mb-4">
-              Bridging Gaps, Breaking Barriers. An inclusive community and fellowship program dedicated to empowering women in technology and entrepreneurship.
+              An inclusive community and fellowship program dedicated to empowering women in technology and entrepreneurship.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors duration-300">
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-4 font-martian">Company</h4>
               <ul>
@@ -55,20 +55,6 @@ const Footer = () => {
                 <li className="mb-2"><a href="/projects" className="text-gray-600 hover:text-gray-900 font-inter">Projects</a></li>
                 <li className="mb-2"><a href="/projects/create" className="text-gray-600 hover:text-gray-900 font-inter">Create Project</a></li>
                 <li className="mb-2"><a href="/grant-programs" className="text-gray-600 hover:text-gray-900 font-inter">Grant Programs</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-4 font-martian">Support</h4>
-              <ul>
-                <li className="mb-2"><a href="/contact" className="text-gray-600 hover:text-gray-900 font-inter">Contact Us</a></li>
-                <li className="mb-2"><a href="#" className="text-gray-600 hover:text-gray-900 font-inter">FAQ</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-4 font-martian">Legal</h4>
-              <ul>
-                <li className="mb-2"><a href="/privacy" className="text-gray-600 hover:text-gray-900 font-inter">Privacy Policy</a></li>
-                <li className="mb-2"><a href="/terms" className="text-gray-600 hover:text-gray-900 font-inter">Terms of Service</a></li>
               </ul>
             </div>
           </div>
