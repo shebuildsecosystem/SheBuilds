@@ -65,10 +65,13 @@ const Hero = () => {
         />
 
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-7xl font-light mb-8 text-gray-900 leading-tight font-martian">
-            Bridging <span id="gaps-target" className="relative">Gaps</span>,
-            <br />
-            Breaking Barriers.
+          <h1 className="flex flex-col items-center font-light mb-8 text-gray-900 leading-tight font-martian gap-2 sm:gap-4 md:gap-6">
+            <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap">
+              Bridging <span id="gaps-target" className="relative">Gaps</span>,
+            </span>
+            <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap">
+              Breaking Barriers.
+            </span>
           </h1>
           
           {/* <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto font-inter font-light">
