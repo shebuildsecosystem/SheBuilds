@@ -14,7 +14,7 @@ const TermsOfService = () => {
           <div className="prose lg:prose-xl mx-auto text-gray-600 font-inter">
             <h2>1. Terms</h2>
             <p>
-              By accessing the website at www.shebuilds.tech, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
+              By accessing the website at www.shebuildsecosystem.com, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
             </p>
 
             <h2>2. Use License</h2>

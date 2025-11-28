@@ -1,7 +1,7 @@
 # SheBuilds Content Reference
 
 ## Website
-www.shebuilds.tech
+www.shebuildsecosystem.com
 
 ## Tagline
 Bridging Gaps, Building Future
@@ -134,7 +134,7 @@ AI Engineer passionate about building innovative tech solutions and empowering c
 ## CONTACT US
 - Phone: +91 88513 63766
 - Email: shebuilds.hacks@gmail.com
-- Website: www.shebuilds.tech
+- Website: www.shebuildsecosystem.com
 
 ## Motto
 "Built by her. Backed by boldness." 

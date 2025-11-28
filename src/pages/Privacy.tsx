@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
 
           <div className="prose lg:prose-xl mx-auto text-gray-600 font-inter">
             <p>
-              SheBuilds ("us", "we", or "our") operates the www.shebuilds.tech website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
+              SheBuilds ("us", "we", or "our") operates the www.shebuildsecosystem.com website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
             </p>
 
             <h2>Information Collection and Use</h2>

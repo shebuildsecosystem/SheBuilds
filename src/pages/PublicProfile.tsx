@@ -319,7 +319,7 @@ const PublicProfile: React.FC = () => {
                 </div>
                 <h1 className={cn("text-3xl font-extrabold mb-1", theme.textHeader)}>{user?.name || 'No Name'}</h1>
                 <p className={cn("text-lg font-mono", theme.textAccent)}>@{user?.username}</p>
-                {user?.portfolio_slug && <p className={cn("text-xs mt-1", theme.textBody)}>shebuilds.tech/{user.portfolio_slug}</p>}
+                {user?.portfolio_slug && <p className={cn("text-xs mt-1", theme.textBody)}>shebuildsecosystem.com/{user.portfolio_slug}</p>}
                 <p className={cn("text-base mt-3 mb-4", theme.textBody)}>{user?.bio}</p>
                 <div className="flex gap-3 justify-center mt-auto">
                     {user?.social_links?.github && <a href={user.social_links.github} className={cn("rounded-lg p-2 transition-colors", theme.socialBg, theme.textAccent)} title="GitHub" target="_blank" rel="noopener noreferrer">{icons.github}</a>}
