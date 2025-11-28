@@ -48,12 +48,12 @@ const Hero = () => {
       <Navbar />
 
       {/* Announcement Banner */}
-      <div className="bg-gray-50 text-center py-3">
+      <a href="https://www.instagram.com/p/DQ4LXVrEnat/" target="_blank" rel="noopener noreferrer" className="block bg-gray-50 text-center py-3 hover:bg-gray-100 transition-colors">
         <p className="text-sm text-gray-600 font-inter">
-          Join a community of over <span className="text-orange-500 font-semibold">10,000+</span> builders and leaders
+          SheBuilds brings <span className="text-orange-500 font-semibold">Code N Connect 3.0</span> to 6 cities
           <span className="ml-2">→</span>
         </p>
-      </div>
+      </a>
 
       {/* Hero Content */}
       <section className="relative px-6 py-16 text-center">
