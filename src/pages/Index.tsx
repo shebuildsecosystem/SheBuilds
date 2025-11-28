@@ -18,9 +18,9 @@ const Index = () => {
       <Values />
       <Events />
       {/* <About /> */}
-      <Ecosystem />
+      {/* <Ecosystem /> */}
       <Impact />
-      <Partners />
+      {/* <Partners /> */}
       {/* <Sponsors />
       <CallToAction /> */}
       <Footer />
