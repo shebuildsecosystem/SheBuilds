@@ -1,6 +1,7 @@
 
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -10,9 +11,9 @@ const Footer = () => {
           {/* Logo and Tagline */}
           <div className="md:col-span-4">
             <div className="mb-4">
-              <a href="/" className="flex items-center space-x-2">
+              <Link to="/" className="flex items-center space-x-2">
                 <span className="text-2xl font-bold text-gray-900 font-martian">SheBuilds</span>
-              </a>
+              </Link>
             </div>
             <p className="text-gray-600 font-inter mb-4">
               An inclusive community and fellowship program dedicated to empowering women in technology and entrepreneurship.
@@ -35,26 +36,26 @@ const Footer = () => {
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-4 font-martian">Company</h4>
               <ul>
-                <li className="mb-2"><a href="#" className="text-gray-600 hover:text-gray-900 font-inter">About</a></li>
-                <li className="mb-2"><a href="#" className="text-gray-600 hover:text-gray-900 font-inter">Events</a></li>
-                <li className="mb-2"><a href="/community" className="text-gray-600 hover:text-gray-900 font-inter">Community</a></li>
-                <li className="mb-2"><a href="#" className="text-gray-600 hover:text-gray-900 font-inter">Resources</a></li>
+                <li className="mb-2"><Link to="/" className="text-gray-600 hover:text-gray-900 font-inter">About</Link></li>
+                <li className="mb-2"><Link to="/events" className="text-gray-600 hover:text-gray-900 font-inter">Events</Link></li>
+                <li className="mb-2"><Link to="/community" className="text-gray-600 hover:text-gray-900 font-inter">Community</Link></li>
+                {/* <li className="mb-2"><Link to="/grant-programs" className="text-gray-600 hover:text-gray-900 font-inter">Resources</Link></li> */}
               </ul>
             </div>
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-4 font-martian">Initiatives</h4>
               <ul>
-                <li className="mb-2"><a href="#" className="text-gray-600 hover:text-gray-900 font-inter">Code N Connect</a></li>
-                <li className="mb-2"><a href="#" className="text-gray-600 hover:text-gray-900 font-inter">Code N Challenge</a></li>
-                <li className="mb-2"><a href="#" className="text-gray-600 hover:text-gray-900 font-inter">Code N Candid</a></li>
+                <li className="mb-2"><Link to="/events" className="text-gray-600 hover:text-gray-900 font-inter">Code N Connect</Link></li>
+                <li className="mb-2"><Link to="/challenges" className="text-gray-600 hover:text-gray-900 font-inter">Code N Challenge</Link></li>
+                <li className="mb-2"><Link to="/events" className="text-gray-600 hover:text-gray-900 font-inter">Code N Candid</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-4 font-martian">Build</h4>
               <ul>
-                <li className="mb-2"><a href="/projects" className="text-gray-600 hover:text-gray-900 font-inter">Projects</a></li>
-                <li className="mb-2"><a href="/projects/create" className="text-gray-600 hover:text-gray-900 font-inter">Create Project</a></li>
-                <li className="mb-2"><a href="/grant-programs" className="text-gray-600 hover:text-gray-900 font-inter">Grant Programs</a></li>
+                <li className="mb-2"><Link to="/projects" className="text-gray-600 hover:text-gray-900 font-inter">Projects</Link></li>
+                <li className="mb-2"><Link to="/projects/create" className="text-gray-600 hover:text-gray-900 font-inter">Create Project</Link></li>
+                <li className="mb-2"><Link to="/grant-programs" className="text-gray-600 hover:text-gray-900 font-inter">Grant Programs</Link></li>
               </ul>
             </div>
           </div>
