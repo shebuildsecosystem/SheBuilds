@@ -75,7 +75,7 @@ const Ecosystem = () => {
 
           {/* Center Image */}
           <div className={`flex justify-center items-center transition-opacity duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <img src="/19square.png" alt="SheBuilds Ecosystem" className="w-full max-w-sm h-auto rounded-lg" />
+            <img src="/19square.webp" alt="SheBuilds Ecosystem" className="w-full max-w-sm h-auto rounded-lg" loading="lazy" decoding="async" />
           </div>
 
           {/* Right Column */}

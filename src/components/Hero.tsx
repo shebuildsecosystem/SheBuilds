@@ -7,36 +7,37 @@ const Hero = () => {
   const navigate = useNavigate();
   const isLoggedIn = Boolean(localStorage.getItem('token'));
   const isAdmin = localStorage.getItem('is_admin') === 'true';
+  // Using WebP format for better performance (fallback to PNG if WebP not available)
   const events = [
-    { eventTitle: "SheBuilds Annual Conference 2023", image: "/1.png" },
-    { eventTitle: "Founder's Fireside Chat", image: "/2.png" },
-    { eventTitle: "UX/UI Design Sprint Week", image: "/3.png" },
-    { eventTitle: "Web3 & Blockchain Workshop", image: "/4.png" },
-    { eventTitle: "Data Science for Startups", image: "/5.png" },
-    { eventTitle: "Digital Marketing Masterclass", image: "/6.png" },
-    { eventTitle: "Leadership in Tech Summit", image: "/7.png" },
-    { eventTitle: "Angel Investing & VCs Panel", image: "/8.png" },
-    { eventTitle: "SheBuilds Annual Conference 2023", image: "/9.png" },
-    { eventTitle: "Founder's Fireside Chat", image: "/10.png" },
-    { eventTitle: "UX/UI Design Sprint Week", image: "/11.png" },
-    { eventTitle: "Web3 & Blockchain Workshop", image: "/12.png" },
-    { eventTitle: "Data Science for Startups", image: "/13.png" },
-    { eventTitle: "Digital Marketing Masterclass", image: "/14.png" },
-    { eventTitle: "Leadership in Tech Summit", image: "/15.png" },
-    { eventTitle: "Angel Investing & VCs Panel", image: "/16.png" },
-    { eventTitle: "SheBuilds Annual Conference 2023", image: "/17.png" },
-    { eventTitle: "Founder's Fireside Chat", image: "/18.png" },
-    { eventTitle: "UX/UI Design Sprint Week", image: "/19.png" },
-    { eventTitle: "Web3 & Blockchain Workshop", image: "/20.png" },
-    { eventTitle: "Data Science for Startups", image: "/21.png" },
-    { eventTitle: "Digital Marketing Masterclass", image: "/22.png" },
-    { eventTitle: "Leadership in Tech Summit", image: "/23.png" },
-    { eventTitle: "Angel Investing & VCs Panel", image: "/24.png" },
-    { eventTitle: "SheBuilds Annual Conference 2023", image: "/25.png" },
-    { eventTitle: "Founder's Fireside Chat", image: "/26.png" },
-    { eventTitle: "UX/UI Design Sprint Week", image: "/27.png" },
-    { eventTitle: "Web3 & Blockchain Workshop", image: "/28.png" },
-    { eventTitle: "Data Science for Startups", image: "/29.png" },
+    { eventTitle: "SheBuilds Annual Conference 2023", image: "/1.webp" },
+    { eventTitle: "Founder's Fireside Chat", image: "/2.webp" },
+    { eventTitle: "UX/UI Design Sprint Week", image: "/3.webp" },
+    { eventTitle: "Web3 & Blockchain Workshop", image: "/4.webp" },
+    { eventTitle: "Data Science for Startups", image: "/5.webp" },
+    { eventTitle: "Digital Marketing Masterclass", image: "/6.webp" },
+    { eventTitle: "Leadership in Tech Summit", image: "/7.webp" },
+    { eventTitle: "Angel Investing & VCs Panel", image: "/8.webp" },
+    { eventTitle: "SheBuilds Annual Conference 2023", image: "/9.webp" },
+    { eventTitle: "Founder's Fireside Chat", image: "/10.webp" },
+    { eventTitle: "UX/UI Design Sprint Week", image: "/11.webp" },
+    { eventTitle: "Web3 & Blockchain Workshop", image: "/12.webp" },
+    { eventTitle: "Data Science for Startups", image: "/13.webp" },
+    { eventTitle: "Digital Marketing Masterclass", image: "/14.webp" },
+    { eventTitle: "Leadership in Tech Summit", image: "/15.webp" },
+    { eventTitle: "Angel Investing & VCs Panel", image: "/16.webp" },
+    { eventTitle: "SheBuilds Annual Conference 2023", image: "/17.webp" },
+    { eventTitle: "Founder's Fireside Chat", image: "/18.webp" },
+    { eventTitle: "UX/UI Design Sprint Week", image: "/19.webp" },
+    { eventTitle: "Web3 & Blockchain Workshop", image: "/20.webp" },
+    { eventTitle: "Data Science for Startups", image: "/21.webp" },
+    { eventTitle: "Digital Marketing Masterclass", image: "/22.webp" },
+    { eventTitle: "Leadership in Tech Summit", image: "/23.webp" },
+    { eventTitle: "Angel Investing & VCs Panel", image: "/24.webp" },
+    { eventTitle: "SheBuilds Annual Conference 2023", image: "/25.webp" },
+    { eventTitle: "Founder's Fireside Chat", image: "/26.webp" },
+    { eventTitle: "UX/UI Design Sprint Week", image: "/27.webp" },
+    { eventTitle: "Web3 & Blockchain Workshop", image: "/28.webp" },
+    { eventTitle: "Data Science for Startups", image: "/29.webp" },
   ];
 
   // Create duplicated arrays for seamless scrolling
@@ -59,9 +60,10 @@ const Hero = () => {
       <section className="relative px-6 py-16 text-center">
         {/* Animated Butterfly */}
         <img
-          src="/butterfly.png"
+          src="/butterfly.webp"
           alt="Animated Butterfly"
           className="butterfly"
+          loading="eager"
         />
 
         <div className="max-w-4xl mx-auto">
@@ -104,6 +106,8 @@ const Hero = () => {
                     src={event.image}
                     alt={event.eventTitle}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -119,6 +123,8 @@ const Hero = () => {
                     src={event.image}
                     alt={event.eventTitle}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

@@ -30,7 +30,7 @@ const Values = () => {
     {
       title: "Turn Representation into Leadership",
       description: "From presence to power — enabling women to lead, influence, and drive change. SheBuilds provides mentorship programs, leadership workshops, and networking opportunities that help women transition from participants to decision-makers in the tech ecosystem.",
-      image: "/4.png",
+      image: "/4.webp",
       stats: ["63%", "Female Representation"],
       imageLeft: true,
       delay: 300
@@ -38,7 +38,7 @@ const Values = () => {
     {
       title: "Democratize Access to Resources",
       description: "Levelling the playing field with opportunities in tech, funding, mentorship, and growth. Through our initiatives, we've disbursed ₹5L+ in grants and support to women-led projects and startups, creating pathways to success for underrepresented groups.",
-      image: "/7.png",
+      image: "/7.webp",
       stats: ["₹5L+", "Grants Disbursed"],
       imageLeft: false,
       delay: 500
@@ -46,7 +46,7 @@ const Values = () => {
     {
       title: "Build an Action-Oriented Sisterhood",
       description: "Building a bold, collaborative network of women who create, launch, and scale together. Our community of 10,000+ members spans across India and APAC regions, fostering connections that transcend competition and embrace collective growth.",
-      image: "/11.png",
+      image: "/11.webp",
       stats: ["10,000+", "Community Members"],
       imageLeft: true,
       delay: 700

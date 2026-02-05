@@ -30,25 +30,25 @@ const Events = () => {
     {
       title: "Code N Challenge",
       description: "Our flagship hackathon with over 7,000+ participants. A launchpad for aspiring women in tech to build and innovate.",
-      image: "/2.png",
+      image: "/2.webp",
       stats: ["7,000+", "Participants"],
     },
     {
       title: "Code N Connect",
       description: "A series of meetups bringing students closer to industry, with 25+ virtual sessions and 8+ in-person gatherings.",
-      image: "/1.png",
+      image: "/1.webp",
       stats: ["25+", "Virtual Sessions"],
     },
     {
       title: "Code N Candid",
       description: "Our podcast featuring candid conversations with women leaders, changemakers, and trailblazers in tech.",
-      image: "/3.png",
+      image: "/3.webp",
       stats: ["50+", "Episodes"],
     },
     {
       title: "Mentorship Circles",
       description: "Structured fellowships and one-on-one guidance led by industry leaders and experienced women in tech.",
-      image: "/4.png",
+      image: "/4.webp",
       stats: ["50+", "Speakers & Mentors"],
     }
   ];
@@ -79,7 +79,7 @@ const Events = () => {
               style={{ transitionDelay: `${200 + index * 100}ms`, transitionProperty: 'opacity, transform' }}
             >
               <div className="relative h-64">
-                <img src={event.image} alt={event.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={event.image} alt={event.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-3 font-martian">{event.title}</h3>

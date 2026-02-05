@@ -140,7 +140,7 @@ const Register = () => {
       <div className="relative w-full max-w-3xl">
         {/* Butterfly Accent */}
         <img
-          src="/butterfly.png"
+          src="/butterfly.webp"
           alt="SheBuilds Butterfly"
           className="absolute -top-10 left-1/2 -translate-x-1/2 w-16 h-16 opacity-80 animate-fade-in-up"
           style={{ zIndex: 2 }}

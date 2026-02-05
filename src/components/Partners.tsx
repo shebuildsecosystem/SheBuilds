@@ -37,38 +37,38 @@ const Partners = ({ className = '' }: PartnersProps) => {
   };
 
   const logos = [
-    { 
-      name: 'Amazon', 
-      src: '/logos/amazon.png' 
+    {
+      name: 'Amazon',
+      src: '/logos/amazon.webp'
     },
-    { 
-      name: 'Microsoft', 
-      src: '/logos/microsoft.png' 
+    {
+      name: 'Microsoft',
+      src: '/logos/microsoft.webp'
     },
-    { 
-      name: 'Meta', 
-      src: '/logos/meta.png' 
+    {
+      name: 'Meta',
+      src: '/logos/meta.webp'
     },
-    { 
-      name: 'Google', 
-      src: '/logos/google.png' 
+    {
+      name: 'Google',
+      src: '/logos/google.webp'
     }
     // },
-    // { 
-    //   name: 'BCG', 
-    //   src: '/logos/bcg.png' 
+    // {
+    //   name: 'BCG',
+    //   src: '/logos/bcg.webp'
     // },
-    // { 
-    //   name: 'Morgan Stanley', 
-    //   src: '/logos/morganstanley.png' 
+    // {
+    //   name: 'Morgan Stanley',
+    //   src: '/logos/morganstanley.webp'
     // },
-    // { 
-    //   name: 'McKinsey', 
-    //   src: '/logos/mckinsey.png' 
+    // {
+    //   name: 'McKinsey',
+    //   src: '/logos/mckinsey.webp'
     // },
-    // { 
-    //   name: 'Goldman Sachs', 
-    //   src: '/logos/goldmansachs.png' 
+    // {
+    //   name: 'Goldman Sachs',
+    //   src: '/logos/goldmansachs.webp'
     // },
   ];
 
@@ -112,10 +112,12 @@ const Partners = ({ className = '' }: PartnersProps) => {
                     flexShrink: 0
                   }}
                 >
-                  <img 
+                  <img
                     src={logo.src}
                     alt={`${logo.name} logo`}
                     style={logoStyle}
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';

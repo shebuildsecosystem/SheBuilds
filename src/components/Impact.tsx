@@ -29,8 +29,9 @@ const Impact = () => {
     };
   }, []);
 
-  const column1Images = ["/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/11.png", "/12.png", "/13.png"];
-  const column2Images = ["/6.png", "/7.png", "/8.png", "/9.png", "/10.png", "/14.png", "/15.png", "/16.png"];
+  // Using WebP format for better performance
+  const column1Images = ["/1.webp", "/2.webp", "/3.webp", "/4.webp", "/5.webp", "/11.webp", "/12.webp", "/13.webp"];
+  const column2Images = ["/6.webp", "/7.webp", "/8.webp", "/9.webp", "/10.webp", "/14.webp", "/15.webp", "/16.webp"];
 
   return (
     <section ref={sectionRef} className="py-20 px-6 bg-white overflow-hidden">
@@ -78,12 +79,12 @@ const Impact = () => {
         <div className={`h-[500px] flex gap-6 overflow-hidden transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="w-1/2 flex flex-col gap-6 animate-scroll-up">
             {[...column1Images, ...column1Images].map((src, index) => (
-              <img key={`col1-${index}`} src={src} alt={`Impact image ${index + 1}`} className="w-full h-auto object-cover rounded-2xl shadow-lg" />
+              <img key={`col1-${index}`} src={src} alt={`Impact image ${index + 1}`} className="w-full h-auto object-cover rounded-2xl shadow-lg" loading="lazy" decoding="async" />
             ))}
           </div>
           <div className="w-1/2 flex flex-col gap-6 animate-scroll-down">
             {[...column2Images, ...column2Images].map((src, index) => (
-              <img key={`col2-${index}`} src={src} alt={`Impact image ${index + 1}`} className="w-full h-auto object-cover rounded-2xl shadow-lg" />
+              <img key={`col2-${index}`} src={src} alt={`Impact image ${index + 1}`} className="w-full h-auto object-cover rounded-2xl shadow-lg" loading="lazy" decoding="async" />
             ))}
           </div>
         </div>
