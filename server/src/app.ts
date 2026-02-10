@@ -20,6 +20,7 @@ import profileRoutes from './routes/profile';
 import eventRoutes from './routes/events';
 import grantProgramRoutes from './routes/grantPrograms';
 import grantApplicationRoutes from './routes/grantApplications';
+import contactRoutes from './routes/contact';
 
 // Load environment variables
 dotenv.config();
@@ -87,6 +88,7 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/grant-programs', grantProgramRoutes);
 app.use('/api/grant-applications', grantApplicationRoutes);
+app.use('/api/contact', contactRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {

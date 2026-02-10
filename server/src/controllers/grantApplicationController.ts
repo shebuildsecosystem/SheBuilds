@@ -291,11 +291,26 @@ export const updateGrantApplicationStatus = async (req: AuthRequest, res: Respon
 
     await application.save();
 
-    // If approved, update grant program approved count
+    // If approved, update grant program approved count and send approval email
     if (status === 'approved') {
       await GrantProgram.findByIdAndUpdate(application.grant_program_id, {
         $inc: { approved_applications_count: 1 }
       });
+
+      // Send approval email
+      const applicant = await User.findById(application.applicant_id);
+      const project = await Project.findById(application.project_id);
+      const grantProgram = await GrantProgram.findById(application.grant_program_id);
+      if (applicant && project && grantProgram) {
+        emailService.sendGrantApprovalEmail(
+          applicant.email,
+          applicant.name,
+          project.title,
+          grantProgram.grant_amount
+        ).catch(error => {
+          console.error('Failed to send grant approval email:', error);
+        });
+      }
     }
 
     res.json({

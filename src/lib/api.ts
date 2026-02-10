@@ -49,11 +49,11 @@ export async function logoutUser() {
 }
 
 export async function forgotPassword(email: string) {
-  return api.post('/auth/forgot-password', { email });
+  return api.post('/password-reset/request', { email });
 }
 
 export async function resetPassword(token: string, newPassword: string) {
-  return api.post('/auth/reset-password', { token, newPassword });
+  return api.post('/password-reset/reset', { token, newPassword });
 }
 
 // --- USER ---
@@ -254,8 +254,13 @@ export async function deleteUser(userId: string) {
   return api.delete(`/auth/admin/users/${userId}`);
 }
 
+// --- CONTACT ---
+export async function submitContactForm(data: { name: string; email: string; message: string }) {
+  return api.post('/contact', data);
+}
+
 // --- ERROR HANDLING ---
-// You can add global error handling here if needed 
+// You can add global error handling here if needed
 
 export async function adminDeleteGrant(grantId: string) {
   return api.delete(`/grant-programs/${grantId}`);

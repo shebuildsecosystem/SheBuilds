@@ -15,10 +15,12 @@ class EmailService {
 
   constructor() {
     this.transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.SMTP_HOST || 'smtp-relay.brevo.com',
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: false,
       auth: {
-        user: process.env.SMTP_USER || 'testingbydivyansh@gmail.com',
-        pass: process.env.SMTP_PASS || ''
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
       }
     });
   }
@@ -127,6 +129,47 @@ class EmailService {
       subject: 'Challenge Registration Confirmed - SheBuilds',
       html
     });
+  }
+
+  // Contact form email (sends message to SheBuilds team + confirmation to sender)
+  async sendContactEmail(senderName: string, senderEmail: string, message: string): Promise<boolean> {
+    const teamHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h1 style="color: #f59e0b;">New Contact Form Message</h1>
+        <p><strong>From:</strong> ${senderName} (${senderEmail})</p>
+        <hr style="border: 1px solid #e5e7eb;" />
+        <p style="white-space: pre-wrap;">${message}</p>
+        <hr style="border: 1px solid #e5e7eb;" />
+        <p style="color: #6b7280; font-size: 12px;">This message was sent via the SheBuilds contact form.</p>
+      </div>
+    `;
+
+    const confirmationHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h1 style="color: #f59e0b;">We received your message!</h1>
+        <p>Hi ${senderName},</p>
+        <p>Thank you for reaching out to SheBuilds. We've received your message and will get back to you within 2-3 business days.</p>
+        <p><strong>Your message:</strong></p>
+        <blockquote style="border-left: 3px solid #f59e0b; padding-left: 12px; color: #4b5563;">${message}</blockquote>
+        <p>Best regards,<br>The SheBuilds Team</p>
+      </div>
+    `;
+
+    // Send to team
+    const teamEmail = await this.sendEmail({
+      to: process.env.CONTACT_EMAIL || 'shebuilds.hacks@gmail.com',
+      subject: `Contact Form: Message from ${senderName}`,
+      html: teamHtml
+    });
+
+    // Send confirmation to sender
+    const confirmEmail = await this.sendEmail({
+      to: senderEmail,
+      subject: 'We received your message - SheBuilds',
+      html: confirmationHtml
+    });
+
+    return teamEmail && confirmEmail;
   }
 
   // Password reset email
